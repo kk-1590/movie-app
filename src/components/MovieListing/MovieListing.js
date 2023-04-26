@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import MovieCard from "../MovieCard/MovieCard";
 import "./MovieListing.scss";
 import { Settings } from "../../common/settings";
+import Shimmer from "../Shimmer/Shimmer";
 
 const MovieListing = () => {
   const movies = useSelector((store) => store.slice.movies);
@@ -35,7 +36,7 @@ const MovieListing = () => {
         <h3>{movies.Error}</h3>
       </div>
     );
-  return (
+  return (!movies.Response) ? <Shimmer />: (
     <div className="movie-wrapper">
       <div className="movie-list">
         <h2>Movies</h2>

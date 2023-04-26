@@ -1,6 +1,7 @@
 import React from "react";
 import "./MovieCard.scss";
 import { Link } from "react-router-dom";
+import Shimmer from '../Shimmer/Shimmer';
 
 const MovieCard = (props) => {
   const { data } = props;

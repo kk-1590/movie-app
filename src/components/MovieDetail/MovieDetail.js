@@ -19,12 +19,12 @@ const MovieDetail = () => {
   }, [dispatch, param.imdbID]);
 
   const data = useSelector((store) => store.slice.selectedMovieOrShow);
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className="movie-section">
         {(data === undefined || data === null) ? (
-          <div>...Loading</div>
+          <div>... Loading</div>
         ) : (
           <>
             <div className="section-left">
